@@ -14,4 +14,5 @@ use App\Http\Controllers\ContactController;
 Route::resource('products', ProductController::class);
 Route::resource('contact', ContactController::class);
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
+Route::get('/about', [HomeController::class, 'about'])->name('home.about');
