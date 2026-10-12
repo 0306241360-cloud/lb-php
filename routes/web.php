@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ContactController;
@@ -12,3 +13,5 @@ use App\Http\Controllers\ContactController;
 // });
 Route::resource('products', ProductController::class);
 Route::resource('contact', ContactController::class);
+
+Route::get('/', [HomeController::class, 'index']);
